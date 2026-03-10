@@ -1,0 +1,180 @@
+:root {
+
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, #F6F8FA 50%, #2567E8 50%);
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.btn {
+  padding-block: 14px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #EFF0F6;
+  border-radius: 10px;
+  color: #1A1C1E;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-google {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+
+.btn-google:hover {
+  background-color: #2567E8;
+  color: white;
+}
+
+span {
+  text-align: center;
+  color: #6C7278;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input {
+  padding: 14px 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #EDF1F3;
+  transition: all 0.2s ease-in-out;
+  color: #1A1C1E;
+  font-size: 20px;
+}
+
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.link {
+  color: #2567E8;
+}
+
+.link:hover {
+  color: #256798;
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.help-register {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-section {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.checkbox-section label {
+  color: #6C7278;
+}
+
+.checkbox-section input {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+}
+
+.btn-login {
+  background-color: #2567E8;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-login:hover {
+  background-color: white;
+  color: #2567E8;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.okay {
+  color: black;
+}
+
+.success {
+  border: 1px solid #2567E8;
+}
+
+.see-pass {
+  text-align: center;
+  color: #256798;
+  font-weight: 500;
+  transition: 0.2s all ease-in-out;
+}
+
+.see-pass:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.sign-up-section {
+  display: flex;
+  justify-content: space-between;
+}
