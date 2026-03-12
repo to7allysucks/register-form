@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 
-.header {
+.header-section {
   color: white;
   display: flex;
   flex-direction: column;
@@ -58,6 +58,10 @@ h1 {
   font-weight: 600;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-google {
   display: flex;
   gap: 10px;
@@ -76,13 +80,14 @@ span {
   color: #6C7278;
 }
 
-.register {
+.form-register {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-input {
+.form-login,
+.form-password{
   padding: 14px 20px;
   background-color: white;
   border-radius: 10px;
@@ -112,18 +117,18 @@ input:focus {
   outline: none;
 }
 
-.help-register {
+.form-register__check-password {
   display: flex;
   justify-content: space-between;
 }
 
-.checkbox-section {
+.check-section {
   display: flex;
   gap: 5px;
   align-items: center;
 }
 
-.checkbox-section label {
+.check-section label {
   color: #6C7278;
 }
 
@@ -162,14 +167,14 @@ input:focus {
   border: 1px solid #2567E8;
 }
 
-.see-pass {
+.check-password {
   text-align: center;
   color: #256798;
   font-weight: 500;
   transition: 0.2s all ease-in-out;
 }
 
-.see-pass:hover {
+.check-password:hover {
   color: black;
   cursor: pointer;
 }

@@ -1,11 +1,16 @@
-const loginElement = document.getElementById('login');
-const passwordElement = document.getElementById('password');
-const formElement = document.querySelector('.register')
+const formElement = document.querySelector('form')
+const loginElement = formElement.elements['login'];
+const passwordElement = formElement.elements['password'];
+
 const errorElement = document.createElement('div');
-const seePassElement = formElement.querySelector('.see-pass');
-const checkBoxElement = formElement.querySelector('.register-section')
+const seePassElement = formElement.elements['check-password'];
 errorElement.className = 'error-text';
 errorElement.textContent = 'Пример: user@example.com'
+
+
+formElement.addEventListener('submit', (event) => {
+  event.preventDefault();
+})
 
 formElement.addEventListener('change',(event) => {
   if (event.target === loginElement) {
@@ -21,8 +26,9 @@ formElement.addEventListener('change',(event) => {
   }
 
   if (event.target === passwordElement) {
-    let lenght = event.target.value.length;
-    if (! (8 <= lenght <= 20)) {
+    let len = event.target.value.length;
+    console.log(passwordElement.value.length);
+    if (! (8 <= len <= 20)) {
       passwordElement.classList.add('error')
       errorElement.textContent = 'Пароль от 8 до 20 символов';
       passwordElement.after(errorElement)

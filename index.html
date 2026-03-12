@@ -12,21 +12,21 @@
   <title>Register</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header-section">
     <img src="logo.png" alt="icon" class="icon">
-    <h1>Sign in to your Account</h1>
-    <h4>Enter your email and password to log in </h4>
+    <h1 class="header__title">Sign in to your Account</h1>
+    <h4 class="header__description">Enter your email and password to log in </h4>
   </header>
   <div class="register-section">
     <button class="btn btn-google"><img src="google.png" alt="">Continue with Google</button>
     <span>Or login with</span>
-    <form class="register">
-      <input type="email" placeholder="Enter email" id="login" class="login">
-      <input type="password" placeholder="Enter password" id="password">
-      <div class="help-register">
-        <div class="checkbox-section">
-          <input type="checkbox" class="see-pass" name="check" id="check">
-          <label for="check" >Показать пароль</label>
+    <form class="form-register">
+      <input name="login" type="email" placeholder="Enter email" id="login" class="form-login">
+      <input name="password" type="password" placeholder="Enter password" id="password" class="form-password">
+      <div class="form-register__check-password">
+        <div class="check-section">
+          <input type="checkbox" class="check-password" name="check-password" id="check-password">
+          <label for="check-password" >Показать пароль</label>
         </div>
         <a href="#" class='link'>Forgot Password ?</a>
       </div>
