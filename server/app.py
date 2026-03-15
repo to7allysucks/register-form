@@ -12,7 +12,7 @@ def init_db():
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL,
+            username TEXT NOT NULL UNIQUE,
             email TEXT NOT NULL UNIQUE,
             password TEXT NOT NULL
         )
@@ -45,7 +45,7 @@ def register():
         return jsonify({"message": f"Успешная регистрация!"}), 201
 
     except sqlite3.IntegrityError:
-        return jsonify({"error": "Такой email уже зарегистрирован"}), 400
+        return jsonify({"error": "Пользователь с таким username или email уже зарегистрирован"}), 400
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
