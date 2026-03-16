@@ -34,6 +34,7 @@ def register():
         return jsonify({"error": "Заполните все поля!"}), 400
 
     hashed_password = generate_password_hash(password)
+    print(hashed_password)
 
     try:
         conn = sqlite3.connect('users.db')
@@ -46,6 +47,9 @@ def register():
 
     except sqlite3.IntegrityError:
         return jsonify({"error": "Пользователь с таким username или email уже зарегистрирован"}), 400
+
+    except Exception as e:
+        return f"Произошла непредвиденная ошибка - {e}"
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
